@@ -5,11 +5,11 @@ const connectToDb = require("./database/db");
 
 connectToDb();
 const app = express();
-const PORT = 3000;
+const PORT = 3030;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 app.use(routes);
 
-app.listen(PORT, () => console.log(`Servidor rodando na porta: ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor rodando na porta: http://localhost:${PORT}`));
