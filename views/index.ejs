@@ -33,9 +33,9 @@
     <section id="tasks">
       <ul>
         <% taskList.forEach((task) => { %>
-        <li>
+        <li class="check-<%= task.check %>">
           <div>
-            <a href="/"><%= task.task %> </a><span>Criado em: <%= task.date.toLocaleDateString('pt-BR')%></span>
+            <a href="/check/<%= task._id %>" class="check-<%= task.check %>"><%= task.task %> </a><span>Criado em: <%= task.date.toLocaleDateString('pt-BR')%></span>
 
           </div>
           <div>
