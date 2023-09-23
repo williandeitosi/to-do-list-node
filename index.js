@@ -2,10 +2,11 @@ const express = require("express");
 const path = require("path");
 const routes = require("./routes/routes");
 const connectToDb = require("./database/db");
+require("dotenv").config();
 
 connectToDb();
 const app = express();
-const PORT = 3030;
+const PORT = process.env.PORT;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
